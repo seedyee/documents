@@ -12,11 +12,11 @@
 
 方案一的几款 Logo 严重参考了 consul 的设计，线条相对简单，并机械的融入了对字母 C、D 和 E 的表达。最重要的是其采用藏头词的方式，用一句口号，隐含了这三个字母，并为社区和企业网站提供了不同版本。参考方案如下：
 
-![社区 Logo](./asserts/community-logo.png)
+![社区 Logo](./assets/community-logo.png)
 
 社区 Logo 对应的口号为：Code, Design, Effortlessly，翻译为：编码，设计，轻而易举
 
-![企业 Logo](./asserts/enterprise-logo.png)
+![企业 Logo](./assets/enterprise-logo.png)
 
 企业 Logo 对应的口号为：Creatives Driven Enterprise，翻译为：创意驱动企业
 
@@ -32,25 +32,25 @@
 
 方案二的几款 Logo，灵感来源于中国古代金文“易”字的一些写法，并以集成电子线路作为线条，力求增强 Logo 的科技感，几张参考资料如下：
 
-![金文“易”字 1](./asserts/jinwen-yi-1.gif)
+![金文“易”字 1](./assets/jinwen-yi-1.gif)
 
-![金文“易”字 2](./asserts/jinwen-yi-2.gif)
+![金文“易”字 2](./assets/jinwen-yi-2.gif)
 
-![形似大脑的集成电子线路图](./asserts/reference-logo-1.png)
+![形似大脑的集成电子线路图](./assets/reference-logo-1.png)
 
 设计后的 Logo 初稿：
 
-![Logo 设计 1](./asserts/our-logo-1.jpg)
+![Logo 设计 1](./assets/our-logo-1.jpg)
 
-![Logo 设计 2](./asserts/our-logo-2.jpg)
+![Logo 设计 2](./assets/our-logo-2.jpg)
 
-![Logo 设计 3](./asserts/our-logo-3.jpg)
+![Logo 设计 3](./assets/our-logo-3.jpg)
 
-![Logo 设计 4](./asserts/our-logo-4.jpg)
+![Logo 设计 4](./assets/our-logo-4.jpg)
 
-![Logo 设计 5](./asserts/our-logo-5.jpg)
+![Logo 设计 5](./assets/our-logo-5.jpg)
 
-![Logo 设计 6](./asserts/our-logo-6.jpg)
+![Logo 设计 6](./assets/our-logo-6.jpg)
 
 #### 意见汇总
 
@@ -68,15 +68,15 @@
 
 目前搜集到的一些参考资料如下：
 
-![金文“易”字 3](./asserts/jinwen-yi-3.gif)
+![金文“易”字 3](./assets/jinwen-yi-3.gif)
 
 这也是金文“易”字的一个变体，看上去不那么具体，而且比较能够明显区分 C、D 和 E 三个字母。所有古文“易”字的参考资料可以在[这里](http://www.51bianji.com/zidian/e69893.html)找到。
 
-![简化线条的大脑](./asserts/brain.png)
+![简化线条的大脑](./assets/brain.png)
 
 这是另外一个大脑的造型，具有简单明快的线条设计，其中也可以找到那三个字母的影子。
 
-![问号](./asserts/question-mark.jpg)
+![问号](./assets/question-mark.jpg)
 
 这是一个联结的网状构图，中间通过颜色的描绘突出了要表达的主体。
 
