@@ -41,6 +41,6 @@
 1. 对graphql集成到springBoot进行研究学习与对springcould相关内容的学习
 2. 对后台用到的相关技术的选择等
 
-#会议遗留问题
+#三、会议遗留问题
 1. 前后端分界的技术选择，对于后台使用node和java界限划分的策略进一步讨论与确定
 2. graphql是使用java实现还是使用JavaScript实现
