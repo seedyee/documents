@@ -70,6 +70,7 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 - isApprove: string	|	是否认证（1-认证，0）字段名
 - foreignState: string 		|	是否公开（primary || private） 
 - - - -
+
 ######3、修改用户
 	url: /users/ :id/mobiles || id/emails || id/bsinformation		|	method: post
 parameter list:
@@ -115,6 +116,7 @@ return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] },
 邮箱信息：email
 
 - email: string
+
 - - - -
 
 ######5、删除用户信息（邮箱信息、手机信息）
@@ -133,10 +135,10 @@ return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] },
 邮箱信息：emails
 
 - id: string
+
 - - - -
 
 日志微服务
-
 ######6、查询安全信息
 	url: /users/:id/security		|	method: get
 parameter list:
@@ -162,4 +164,3 @@ return : {result:{sessions: [{...}, {...}, ...],    logs : [{...}, {...}, ...] }
 - actorLocation: string		|	当前位置
 - createdTime: date		|	操作时间
 - user: string		|	所属用户
-- - - -
