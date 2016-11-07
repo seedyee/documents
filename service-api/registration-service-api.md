@@ -17,8 +17,10 @@ parameter list:
 - id: string
 
 return result:	{error: code}
+
 - - - -
 - - - -
+
 ####微服务-用户账号服务API文档
 ######1、用户注册
 
@@ -139,8 +141,10 @@ return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] },
 - id: string
 
 - - - -
+- - - -
 
-日志微服务
+####微服务-日志服务API文档
+
 ######6、查询安全信息
 	url: /users/:id/security		|	method: get
 parameter list:
