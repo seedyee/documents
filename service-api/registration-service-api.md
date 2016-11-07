@@ -1,4 +1,4 @@
-####微服务-认证服务API文档
+####微服务-认证服务API接口
 
 ######1、用户登录
 	url: /authc/sigin		|	method: post
@@ -21,7 +21,7 @@ return result:	{error: code}
 - - - -
 - - - -
 
-####微服务-用户账号服务API文档
+####微服务-用户账号服务API接口
 ######1、用户注册
 
 	url: /users	|	method: post
@@ -143,7 +143,7 @@ return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] },
 - - - -
 - - - -
 
-####微服务-日志服务API文档
+####微服务-日志服务API接口
 
 ######6、查询安全信息
 	url: /users/:id/security		|	method: get
