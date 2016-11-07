@@ -69,6 +69,7 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 - isDefault: string	|	是否默认（1-默认，0）
 - isApprove: string	|	是否认证（1-认证，0）字段名
 - foreignState: string 		|	是否公开（primary || private） 
+
 - - - -
 
 ######3、修改用户
@@ -98,6 +99,7 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 - id: string
 - isDefault: string	|	是否默认（1-默认，0）
 - foreignState: string 		|	是否公开（primary || private）
+
 - - - -
 
 ######4、新增邮箱或者电话
