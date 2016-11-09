@@ -47,14 +47,14 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 基本信息：basicsInformation
 
 - id: string
-- usersname: string	|	用户名
+- username: string	|	用户名
 - avatar: string	|	用户头像url
 - company: string	|	所在公司
 - companyAddress: string	|		公司地址
 - companyBusiness: string	|	行业
 - position: string	|	职业
 - personal: string	|	个人简介
-- registrationDate: data	|	注册时间
+- timestamp: data	|	注册时间
 - realName: string	|	用户真实姓名
 
 电话信息：mobiles（电话认证--保留）
@@ -63,6 +63,7 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 - mobile: string	|	电话
 - isDefault: string	|	是否默认（1-默认，0）
 - isVerified: string 		|		是否认证（1-认证，0)
+- isPublic:  string 		|		是否认证（1-认证，0)
 
 邮箱信息：emails
 
@@ -168,5 +169,5 @@ return : {result:{sessions: [{...}, {...}, ...],    logs : [{...}, {...}, ...] }
 - actor: string		|	操作人
 - actorIp: string		|	操作机器ip
 - actorLocation: string		|	当前位置
-- createdTime: date		|	操作时间
+- timestamp: date		|	操作时间
 - user: string		|	所属用户
