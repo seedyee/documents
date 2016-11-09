@@ -1,7 +1,7 @@
 ####微服务-认证服务API接口
 
 ######1、用户登录
-	url: /authc/sigin		|	method: post
+	url: /authc/signin		|	method: post
 parameter list:
 
 - principal: string		|	用户名或者邮箱
