@@ -28,7 +28,7 @@ return result:	{error: code}
 parameter list:
 
 - email: string
-- usersname: string
+- username: string
 - password:string
 - verifyCode: string		|	校验码（保留）
 
@@ -42,9 +42,9 @@ parameter list:
 
 - id: string
 
-return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: code}
+return : {result:{ basicInformation: {...}, mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: code}
 
-基本信息：basicsInformation
+基本信息：basicInformation
 
 - id: string
 - username: string	|	用户名
