@@ -52,7 +52,7 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 - company: string	|	所在公司
 - companyAddress: string	|		公司地址
 - companyBusiness: string	|	行业
-- posation: string	|	职业
+- position: string	|	职业
 - personal: string	|	个人简介
 - registrationDate: data	|	注册时间
 - realName: string	|	用户真实姓名
@@ -62,15 +62,15 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 - id: string
 - mobile: string	|	电话
 - isDefault: string	|	是否默认（1-默认，0）
-- isVerify: string 		|		是否认证（1-认证，0)
+- isVerified: string 		|		是否认证（1-认证，0)
 
 邮箱信息：emails
 
 - id: string
 - email: string	|	邮箱名
 - isDefault: string	|	是否默认（1-默认，0）
-- isApprove: string	|	是否认证（1-认证，0）字段名
-- foreignState: string 		|	是否公开（primary || private） 
+- isVerified: string	|	是否认证（1-认证，0）字段名
+- isPublic: string 		|	是否公开（primary || private） 
 
 - - - -
 
