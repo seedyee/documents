@@ -56,27 +56,27 @@ return : {result:{ basicInformation: {...}, mobiles: [{...}, {...}, ...],   emai
 - personal: string	|	个人简介
 - timestamp: data	|	注册时间
 - realName: string	|	用户真实姓名
+- email: string		|	默认邮箱
+- mobile: string	|	默认电话
+- isPublicEmail: string 	|	邮箱是否公开(1-公开，0)
+- isPublicMobile: string	|	电话是否公开(1-公开，0)
 
 电话信息：mobiles（电话认证--保留）
 
 - id: string
 - mobile: string	|	电话
-- isDefault: string	|	是否默认（1-默认，0）
 - isVerified: string 		|		是否认证（1-认证，0)
-- isPublic:  string 		|		是否认证（1-认证，0)
 
 邮箱信息：emails
 
 - id: string
 - email: string	|	邮箱名
-- isDefault: string	|	是否默认（1-默认，0）
-- isVerified: string	|	是否认证（1-认证，0）字段名
-- isPublic: string 		|	是否公开（primary || private） 
+- isVerified: string	|	是否认证（1-认证，0）
 
 - - - -
 
 ######3、修改用户
-	url: /users/ :id/mobiles || id/emails || id/bsinformation		|	method: post
+	url: /users/ :id/mobiles || id/emails || id/basicInformation		|	method: post
 parameter list:
 
 - basicsInformation: {key: value, key: value, ...}
@@ -95,13 +95,12 @@ return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   ema
 电话信息：mobiles
 
 - id: string
-- isDefault: string	|	是否默认（1-默认，0）
+- isVerified: string 		|		是否认证（1-认证，0)
 
 邮箱信息：emails
 
 - id: string
-- isDefault: string	|	是否默认（1-默认，0）
-- foreignState: string 		|	是否公开（primary || private）
+- isVerified: string 		|		是否认证（1-认证，0)
 
 - - - -
 
