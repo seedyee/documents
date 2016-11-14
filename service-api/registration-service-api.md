@@ -42,13 +42,13 @@ return : {result: {key: value, key: value, ...}, error: {code: value, message: v
 - - - -
 
 ######2、查询用户
-	url: /accounts/{id}/mobile || {id}/email || {id}/basicInfo
+	url: /accounts/{id}/mobiles || {id}/emails || {id}/basicInfo
 	method: get
 parameter list:
 
 - id: string
 
-return : {result:{ basicInfo: {...}, mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: {code: value, message: value}}
+return result:	{result: {key: value, key: value, ...}, error: {code: value, message: value}}
 
 基本信息：basicInfo
 
@@ -64,25 +64,25 @@ return : {result:{ basicInfo: {...}, mobiles: [{...}, {...}, ...],   emails: [{.
 - realName: string	|	用户真实姓名
 - email: string		|	默认邮箱
 - mobile: string	|	默认电话
-- isPublicEmail: boolean 	|	邮箱是否公开(ture-公开，false)
-- isPublicMobile: boolean	|	电话是否公开(ture-公开，false)
+- isPublicEmail: boolean 	|	邮箱是否公开(true-公开，false)
+- isPublicMobile: boolean	|	电话是否公开(true-公开，false)
 
 电话信息：mobiles（电话认证--保留）
 
 - id: string
 - mobile: string	|	电话
-- isVerified: boolean 		|		是否认证（ture-认证，false)
+- isVerified: boolean 		|		是否认证（true-认证，false)
 
 邮箱信息：emails
 
 - id: string
 - email: string	|	邮箱名
-- isVerified: boolean	|	是否认证（ture-认证，false）
+- isVerified: boolean	|	是否认证（true-认证，false）
 
 - - - -
 
 ######3、修改用户
-	url: /accounts/{id}/mobile/{id} || {id}/email/{id} || {id}/password || {id}/basicInfo	method: post
+	url: /accounts/{id}/mobiles/{id} || {id}/emails/{id} || {id}/password || {id}/basicInfo	method: post
 parameter list:
 
 - basicsInfo: {key: value, key: value, ...}
@@ -100,12 +100,12 @@ return : {error: {code: value, message: value}}
 电话信息：mobiles
 
 - id: string
-- isVerified: boolean 		|		是否认证（ture-认证，false)
+- isVerified: boolean 		|		是否认证（true-认证，false)
 
 邮箱信息：emails
 
 - id: string
-- isVerified: boolean 		|		是否认证（ture-认证，false)
+- isVerified: boolean 		|		是否认证（true-认证，false)
 
 修改密码
 
@@ -115,7 +115,7 @@ return : {error: {code: value, message: value}}
 - - - -
 
 ######4、新增邮箱或者电话
-	url: /accounts/{id}/email || {id}/mobile 
+	url: /accounts/{id}/emails || {id}/mobiles
 	method: post
 parameter list:
 
@@ -134,7 +134,7 @@ return : {error: {code: value, message: value}}
 - - - -
 
 ######5、删除用户信息（邮箱信息、手机信息）
-	url: /accounts/{id}/mobile/{id} || {id}/email/{id}  
+	url: /accounts/{id}/mobiles/{id} || {id}/emails/{id}  
 	method: DELETE
 
 return : {error: {code: value, message: value}}
@@ -159,17 +159,17 @@ parameter list:
 
 - id: string
 
-return : {result:{sessionLog: [{...}, {...}, ...],    securityLog : [{...}, {...}, ...] }, error: {code: value, message: value}}
+return result:	{result: {key: value, key: value, ...}, error: {code: value, message: value}}
 
-会话信息：sessions
+会话信息：sessionLog
 
 - ip: string	|	当前id
 - lastVisit: date	|	最后访问时间
 - equipment: string		|	设备
 - location: string		|	位置
-- loginTime: date		|	登录时间
+- timestamp: date		|	登录时间
 
-安全日志：logs
+安全日志：securityLog
 
 - id: string
 - action: string	|	操作
