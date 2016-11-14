@@ -1,22 +1,25 @@
 ####微服务-认证服务API接口
 
 ######1、用户登录
-	url: /authc/signin		|	method: post
+	url: /authc/signin
+	method: post
 parameter list:
 
 - principal: string		|	用户名或者邮箱
 - password: string
 - verifyCode: string		|	校验码（保留）
 
-return result:	{result: {key: value, key: value, ...}, error: code}
+return result:	{result: {key: value, key: value, ...}, error: {code: value, message: value}}
+
 - - - -
 ######2、退出登录
-	url: /authc/signout		|	method: post
+	url: /authc/signout	
+	method: post
 parameter list:
 
 - id: string
 
-return result:	{error: code}
+return result:	{error: {code: value, message: value}}
 
 - - - -
 - - - -
@@ -24,30 +27,33 @@ return result:	{error: code}
 ####微服务-用户账号服务API接口
 ######1、用户注册
 
-	url: /users	|	method: post
+	url: /accounts	
+	method: post
 parameter list:
 
 - email: string
-- username: string
+- name: string
 - password:string
 - verifyCode: string		|	校验码（保留）
 
 
-return : {result: {key: value, key: value, ...}, error: code}
+return : {result: {key: value, key: value, ...}, error: {code: value, message: value}}
+
 - - - -
 
 ######2、查询用户
-	url: /users/:id		|	method: get
+	url: /accounts/{id}/mobile || {id}/email || {id}/basicInfo
+	method: get
 parameter list:
 
 - id: string
 
-return : {result:{ basicInformation: {...}, mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: code}
+return : {result:{ basicInfo: {...}, mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: {code: value, message: value}}
 
-基本信息：basicInformation
+基本信息：basicInfo
 
 - id: string
-- username: string	|	用户名
+- name: string	|	用户名
 - avatar: string	|	用户头像url
 - company: string	|	所在公司
 - companyAddress: string	|		公司地址
@@ -58,60 +64,64 @@ return : {result:{ basicInformation: {...}, mobiles: [{...}, {...}, ...],   emai
 - realName: string	|	用户真实姓名
 - email: string		|	默认邮箱
 - mobile: string	|	默认电话
-- isPublicEmail: string 	|	邮箱是否公开(1-公开，0)
-- isPublicMobile: string	|	电话是否公开(1-公开，0)
+- isPublicEmail: boolean 	|	邮箱是否公开(ture-公开，false)
+- isPublicMobile: boolean	|	电话是否公开(ture-公开，false)
 
 电话信息：mobiles（电话认证--保留）
 
 - id: string
 - mobile: string	|	电话
-- isVerified: string 		|		是否认证（1-认证，0)
+- isVerified: boolean 		|		是否认证（ture-认证，false)
 
 邮箱信息：emails
 
 - id: string
 - email: string	|	邮箱名
-- isVerified: string	|	是否认证（1-认证，0）
+- isVerified: boolean	|	是否认证（ture-认证，false）
 
 - - - -
 
 ######3、修改用户
-	url: /users/ :id/mobiles || id/emails || id/basicInformation		|	method: post
+	url: /accounts/{id}/mobile/{id} || {id}/email/{id} || {id}/password || {id}/basicInfo	method: post
 parameter list:
 
-- basicsInformation: {key: value, key: value, ...}
-- mobiles: {key: value, key: value, ...}
-- emails: {key: value, key: value, ...}
+- basicsInfo: {key: value, key: value, ...}
+- mobile: {key: value, key: value, ...}
+- email: {key: value, key: value, ...}
+- password: {key: value, key: value, ...}
 
-return : {result:{ basicsInformation: {...}, mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: code}
+return : {error: {code: value, message: value}}
 
-基本信息：basicsInformation
+基本信息：basicsInfo
 
 - id: string
-- password: string 
-- newPassword: string
 - 其它字段信息请看查询用户的API
 
 电话信息：mobiles
 
 - id: string
-- isVerified: string 		|		是否认证（1-认证，0)
+- isVerified: boolean 		|		是否认证（ture-认证，false)
 
 邮箱信息：emails
 
 - id: string
-- isVerified: string 		|		是否认证（1-认证，0)
+- isVerified: boolean 		|		是否认证（ture-认证，false)
+
+修改密码
+
+- password: string
+- newPassword: string
 
 - - - -
 
 ######4、新增邮箱或者电话
-	url: /users/:id/email || id/mobile		|	method: post
+	url: /accounts/{id}/email || {id}/mobile 
+	method: post
 parameter list:
 
-- mobile: {key: value, key: value, ...}
-- email: {key: value, key: value, ...}
+- {key: value, key: value, ...}
 
-return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: code}
+return : {error: {code: value, message: value}}
 
 电话信息：mobile
 
@@ -124,13 +134,10 @@ return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] },
 - - - -
 
 ######5、删除用户信息（邮箱信息、手机信息）
-	url: /users/delete		|	method: post
-parameter list:
+	url: /accounts/{id}/mobile/{id} || {id}/email/{id}  
+	method: DELETE
 
-- mobiles: [id, ...]
-- emails: [id, ...]
-
-return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] }, error: code}
+return : {error: {code: value, message: value}}
 
 电话信息：mobiles
 
@@ -146,12 +153,13 @@ return : {result:{mobiles: [{...}, {...}, ...],   emails: [{...}, {...}, ...] },
 ####微服务-日志服务API接口
 
 ######6、查询安全信息
-	url: /users/:id/security		|	method: get
+	url: /accounts/{id}/sessionLog	|| {id}/securityLog
+	method: get
 parameter list:
 
 - id: string
 
-return : {result:{sessions: [{...}, {...}, ...],    logs : [{...}, {...}, ...] }, error: null}
+return : {result:{sessionLog: [{...}, {...}, ...],    securityLog : [{...}, {...}, ...] }, error: {code: value, message: value}}
 
 会话信息：sessions
 
