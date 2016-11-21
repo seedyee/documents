@@ -1,36 +1,28 @@
 #返回码文档
 ##一、服务返回码
 ###1.1 认证服务与用户服务返回码表
-| code		|	描述
-|---------|---------------------------------
-| 1000001	|	该用户已经存在
-| 1000002	|	密码错误
-| 1000003	|	密码为空
-| 1000004	|	用户名与密码不匹配
-| 1000005	|	用户不存在
-| 1000006	|	用户名或密码为空
-| 1000007	|	该邮箱不是默认邮箱，不能进行该操作
-| 1000008	|	邮箱不存在
-| 1000009	|	请用默认邮箱登录
-| 1000010	|	邮箱没有通过验证
-| 1000011 |  用户没有关联该邮箱
-| 1000012 |  该邮箱还没有认证，不能设置该邮箱为默认邮箱
-| 1000013 |  用户没有关联该电话号码
-| 1000014 |  该电话还没有认证，不能设置该电话为默认电话
-| 1000015 |  该邮箱没有关联用户
-| 1000016 |  没有传递参数	
-| 1000017 |  该电话没有关联用户
-| 1000018 |  该邮箱已经被使用过
-| 1000019 |  该号码已经被使用过
-| 1000020 |  默认邮箱不能删除
-| 1000021 |  默认电话不能删除
+| code		| 错误代码           			|	中文描述             |  英文描述
+|---------|-------------------------	|----------------------|------------------
+| 1000001	|	ACCOUNT_EXISTED 			|	该用户已经存在        | the account has existed
+| 1000002	|	ILLEGAL_PASSWORD			|	密码错误             | the password is illegal
+| 1000003	|	ILLEGAL_ACCOUNT_PASSWORD|	用户名与密码不匹配     | the account and the password is mismatching
+| 1000004	|	ACCOUNT_NOT_EXIST		|	用户不存在           |  the account is not     existed
+| 1000005	|	EMAIL_NOT_VERIFIED		|	邮箱没有通过验证      |  the email is not verified
+| 1000006 |	ACCOUNT_NOT_EMAIL		|  用户没有关联该邮箱     |  the account is not attached to the email
+| 1000007 |	MOBILE_NOT_VERIFIED		|  该电话还没有认证       |  the mobile is not verified
+| 1000008 |	ACCOUNT_NOT_MOBILE		|  用户没有关联该电话号码  |  the account is not attached the mobile
+| 1000009 |	ILLEGAL_ARGUMENT			|  输入的参数有误        | the inputting argument is wrong
+| 1000010 |	EMAIL_EXISTED				|  该邮箱已经被使用过     | the email has existed 
+| 1000011 |	MOBILE_EXISTED			|  该号码已经被使用过     | the mobile has existed
+| 1000012 |	ILLEGAL_DELETE_EMAIL	|  默认邮箱不能删除       | the default email could not be deleted
+| 1000013 |	ILLEGAL_DELETE_MOBILE	|  默认电话不能删除       | the default mobile could not be deleted
 
 
 
 
 ##二、系统状态码
-| code		|	描述
-|---------|----------------------------------
-| 9999999	|	系统错误，请联系管理员
+| code		|	错误代码		|	描述               |   英文描述
+|---------|----------------|--------------------|--------------
+| 9999999	|	SYSTEM_ERROR	|	系统错误，请联系管理员| system error, please contact your administrator
 
 
