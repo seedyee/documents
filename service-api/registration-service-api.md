@@ -125,7 +125,7 @@ return : {error: {code: value, message: value}}
 
 电话信息：mobile
 
-- phone: string
+- mobile: string
 
 邮箱信息：email
 
