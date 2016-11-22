@@ -1,25 +1,24 @@
-#返回码文档
-##一、服务返回码
-###1.1 认证服务与用户服务返回码表
-| code		| 错误代码           			|	中文描述             |  英文描述
-|---------|-------------------------	|----------------------|------------------
-| 1000001	|	ACCOUNT_EXISTED 			|	该用户已经存在        | the account has existed
-| 1000020	|	INVALID_ACCOUNT_PASSWORD|	用户名与密码不匹配     | the account and the password is mismatching
-| 1000040	|	UNVERIFIED_EMAIL		|	邮箱没有通过验证      |  the email is not verified
-| 1000060 |	ACCOUNT_NOT_EMAIL		|  用户没有关联该邮箱     |  the account is not attached to the email
-| 1000080 |	UNVERIFIED_MOBILE		|  该电话还没有认证       |  the mobile is not verified
-| 1000100 |	ACCOUNT_NOT_MOBILE		|  用户没有关联该电话号码  |  the account is not attached the mobile
-| 1000120 |	EMAIL_EXISTED				|  该邮箱已经被使用过     | the email has existed 
-| 1000140 |	MOBILE_EXISTED			|  该号码已经被使用过     | the mobile has existed
-| 1000160 |	CANNOT_DELETE_DEFAULT_EMAIL	|  默认邮箱不能删除       | the default email could not be deleted
-| 1000180 |	CANNOT_DELETE_DEFAULT_M	OBILE	|  默认电话不能删除       | the default mobile could not be deleted
+# 返回码文档
 
+## 一、服务返回码
 
+### 1.1、认证服务与用户服务返回码表
 
+| Code	  | Name                              | Description                                 | Chinese Description
+|---------|-----------------------------------|---------------------------------------------|---------------------
+| 1000010	|	EXISTED_ACCOUNT			              |	account already exists                      | 账户已存在
+| 1000020	|	UNMATCHED_ACCOUNT_AND_PASSWORD    |	account and password do not match           | 账户与密码不匹配
+| 1000030	|	UNVERIFIED_EMAIL		              |	email has not been verified                 | 邮箱未验证
+| 1000040 |	UNASSOCIATED_ACCOUNT_AND_EMAIL    | account and email have not bean associated  | 账户与邮箱未关联
+| 1000050 |	UNVERIFIED_MOBILE		              | mobile has not bean verified                | 电话号码未验证
+| 1000060 |	UNASSOCIATED_ACCOUNT_AND_MOBILE		| account and email have not bean associated  | 账户与电话号码未关联
+| 1000070 |	USED_EMAIL				                | email has been used                         | 该邮箱已被使用
+| 1000080 |	USED_MOBILE			                  | mobile has been used                        | 该电话号码已被使用
+| 1000090 |	UNDELETABLE_DEFAULT_EMAIL	        | default email cannot be deleted             | 不可删除默认邮箱
+| 1000100 |	UNDELETABLE_DEFAULT_MOBILE	      | default mobile cannot be deleted            | 不可删除默认电话号码
 
-##二、系统状态码
-| code		|	错误代码		|	描述               |   英文描述
-|---------|----------------|--------------------|--------------
-| 9999999	|	SYSTEM_ERROR	|	系统错误，请联系管理员| system error, please contact your administrator
+## 二、系统状态码
 
-
+| Code		|	Name           | Description        | Chinese Description
+|---------|----------------|--------------------|---------------------
+| 9999999	|	SYSTEM_ERROR	 | system error	      | 系统错误
