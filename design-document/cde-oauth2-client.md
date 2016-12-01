@@ -22,14 +22,14 @@
 - - - -
 - - - -
 
-##### 目录层级
+#### 目录层级
 
 * 项目的java文件存放的目录: `cde-oauth2-client/src/main/io/cde/oauth2/client/*`.
 * 项目配置文件存放的目录: `cde-oauth2-client/src/main/resources/*`.
 
 - - - -
 
-##### 项目的java文件目录
+#### 项目的java文件目录
 
 该目录下存放 cde-oauth2-client 项目的所有java文件。在该根目录下只存放有一个该项目程序的入口文件
  `cde-Application.java`.
@@ -50,22 +50,22 @@
 
 
 
-###### domain
-###### controller
-###### service
-###### build
-###### agent
+##### domain
+##### controller
+##### service
+##### build
+##### agent
 
 - - - -
 
-##### 项目的参数配置文件目录
+#### 项目的参数配置文件目录
 
-###### bootstrap.yml
-###### application.yml
-###### log4j2.xml
+##### bootstrap.yml
+##### application.yml
+##### log4j2.xml
 
 - - - -
 
 
-##### 依赖配置文件pom.xml
+#### 依赖配置文件pom.xml
 项目pom.xml文件继承 [cde-parent](https://github.com/seedyee/cde-parent) 项目的依赖配置。
