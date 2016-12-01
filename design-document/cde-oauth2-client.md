@@ -31,12 +31,10 @@
 
 #### 项目的java文件目录
 
-该目录下存放 cde-oauth2-client 项目的所有java文件。在该根目录下只存放有一个该项目程序的入口文件
+该目录文件下存放 cde-oauth2-client 项目的所有java文件。在该根目录下只存放有一个该项目程序的入口文件
  `cde-Application.java`.
-
-{
-
-    public class Application{
+	
+	public class Application{
     	/**
      	* 程序入口.
      	* @param args this args.
@@ -46,12 +44,12 @@
     	}
     }
 
-}
 
+- - - -
 
+#### domain
 
-##### domain
-该文件用于存放entity实体，本项目中设计4个entity，分别为 `DomainEntity.java`, `AuthorizationCodeRequestInfo.java`, `AccessTokenRequestInfo.java`, `UserRequestInfo.java`.
+该目录文件用于存放entity实体，本项目中设计4个entity，分别为 `DomainEntity.java`, `AuthorizationCodeRequestInfo.java`, `AccessTokenRequestInfo.java`, `UserRequestInfo.java`.
 
 1、DomainEntity.java 是个基础类，用于继承。
           			
@@ -130,18 +128,69 @@
 |getClientSecret|||该方法为属性clientSecret的get方法，作为与github交互时的传递参数，需要通过在该方法上加@JsonProperty("client_secret")，使得传递的字段标识为client_secret
 |getGrantType|||该方法为属性grantType的get方法，作为与github交互时的传递参数，需要通过在该方法上加@JsonProperty("grant_type")，使得传递的字段标识为grant_type|
 
-##### controller
-##### service
-##### build
-##### agent
+- - - -
+
+#### controller
+
+该目录文件下用于存放声明 RestController 接口的java文件，`OAuthController.java`
+
+1、该接口文件需声明四个成员变量：
+
+	/**
+     * 日志记录.
+     */
+    private final Logger logger = LoggerFactory.getLogger(OAuthController.class);
+
+    /**
+     * 获取token的service.
+     */
+    @Autowired
+    private AccessTokenRequestService accessTokenRequestService;
+
+    /**
+     * 根据token获取用户数据的service.
+     */
+    @Autowired
+    private UserInfoRequestService userInfoRequestService;
+
+    /**
+     * 组装请求code的url的service.
+     */
+    @Autowired
+    private AuthorizationCodeRequestService authorizationCodeRequestService;
+
+2、方法
+
+authentication(): 该方法对应接口 `/authentication` 。调用该接口，返回值为与github授权登录请求code的完整 `url`
+		
+	@RequestMapping(value = "/authentication", method = RequestMethod.GET)
+    private String authentication() {}
+
+callback(): 该方法对应接口 `/callback` ，是github验证服务端的回调接口。回调返回参数 `code` 和 `state` , code 用于请求token，state验证授权登录的唯一性。
+
+	@RequestMapping("/callback")
+    private List callback(@RequestParam("code") final String code, @RequestParam("state") final long state) {}
+
+
+- - - -
+
+#### service
+
+- - - -
+
+#### build
+
+- - - -
+
+#### agent
 
 - - - -
 
 #### 项目的参数配置文件目录
 
-##### bootstrap.yml
-##### application.yml
-##### log4j2.xml
+#### bootstrap.yml
+#### application.yml
+#### log4j2.xml
 
 - - - -
 
