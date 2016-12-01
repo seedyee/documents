@@ -1,12 +1,11 @@
 ## cde-oauth2-client
 
-项目是依赖 spring-boot 构建的一个微服务。通过调用 github oauth-service，根据用户授权登录，从而获取用户基本信息的一个微服务。
+本篇是微服务项目cde-oauth2-client的一份详细设计文档。该项目是依赖 spring-boot 构建的一个微服务，对接github的OAuth2-service的客户端实现，通过调用 github oauth-service服务，根据用户授权登录，从而获取到用户基本信息。
  
 - - - -
 
 #### Table of Contents
 
-* [开始](#开始)
 * [目录层级](#目录层级)
 * [项目的java文件目录](#项目的java文件目录)
   * [domain](#domain)
@@ -21,11 +20,6 @@
 * [依赖配置文件pom.xml](#依赖配置文件pom.xml)
 
 - - - -
-
-##### 开始
-
-* 本篇是对微服务项目cde-oauth2-client的一份详细设计文档。**OAuth2-client**, 对接OAuth2-service的客户端实现。项目pom.xml文件继承 [cde-parent](https://github.com/seedyee/cde-parent) 项目的依赖配置。
-
 - - - -
 
 ##### 目录层级
@@ -74,3 +68,4 @@
 
 
 ##### 依赖配置文件pom.xml
+项目pom.xml文件继承 [cde-parent](https://github.com/seedyee/cde-parent) 项目的依赖配置。
