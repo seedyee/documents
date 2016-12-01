@@ -68,7 +68,7 @@
 | 方法名 		| 参数          | 返回值  | 描述
 |------------|---------------|--------|---------
 | DomainEntity() | String clientId |   |构造函数|
-|getClientId() | String clientId | String clientId |该方法为属性clientId的get方法，作为与github交互时的请求参数，字段需要通过在该方法上加@JsonProperty("client_id")，是的传递是字段标识为client_id
+|getClientId() | String clientId | String clientId |该方法为属性clientId的get方法，作为与github交互时的传递参数，需要通过在该方法上加@JsonProperty("client_id")，使得传递的字段标识为client_id
 
 2、UserRequestInfo.java 用于和github交互时获取用户信息的请求传递参数的entity.
 
@@ -109,10 +109,26 @@
 | AuthorizationCodeRequestInfo() | String clientId, String scope, String redirectUrl, long state, String responseType, String requestAuthorizeUrl |   |构造函数|
 |getRedirectUrl(), getState(), getScope(), getResponseType(), getRequestAuthorizeUrl() |  |  |scope, redirectUrl, requestAuthorizeUrl, responseType, state所列属性的get方法
 
-
 4、AccessTokenRequestInfo.java 用于和github交互时获取token的请求传递参数的entity.
 
+继承: DomainEntity.java	
 
+属性:
+
+| 标识 		| 类型          | 字段描述  
+|------------|---------------|--------|---------
+| clientSecret 		| String         | 请求的授权范围标识
+| code 	| String         | code请求之后的github回调url
+| grantType 	| String | 请求code的登录验证url
+
+方法:
+
+| 方法名 		| 参数          | 返回值  | 描述
+|------------|---------------|--------|---------
+| AccessTokenRequestInfo() |String clientId, String clientSecret, String code, String grantType|   |构造函数|
+|getCode|  |  |属性code的get方法
+|getClientSecret|||该方法为属性clientSecret的get方法，作为与github交互时的传递参数，需要通过在该方法上加@JsonProperty("client_secret")，使得传递的字段标识为client_secret
+|getGrantType|||该方法为属性grantType的get方法，作为与github交互时的传递参数，需要通过在该方法上加@JsonProperty("grant_type")，使得传递的字段标识为grant_type|
 
 ##### controller
 ##### service
