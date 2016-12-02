@@ -82,7 +82,7 @@ return result:	{result: {key: value, key: value, ...}, error: {code: value, mess
 - - - -
 
 ######3、修改用户
-	url: /accounts/{id}/mobiles/{id} || {id}/emails/{id} || {id}/password || {id}/basicInfo	method: post
+	url: /accounts/{id}/mobiles/{id} || {id}/emails/{id} || {id}/password || {id}/basicInfo	|| {id}/name method: post
 parameter list:
 
 - basicsInfo: {key: value, key: value, ...}
@@ -111,6 +111,10 @@ return : {error: {code: value, message: value}}
 
 - password: string
 - newPassword: string
+
+修改用户名
+
+- name: string
 
 - - - -
 
