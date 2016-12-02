@@ -18,7 +18,6 @@
   
   * [agent](#agent)
   
-* [项目的参数配置文件](#项目的参数配置文件)
 
 * [依赖配置文件pom.xml](#依赖配置文件pom.xml)
 
@@ -232,17 +231,6 @@ getUserInfo(RequestEntity<String> requestEntity, ParameterizedTypeReference<List
 |  参数          | 返回值类型  | 描述
 |---------------------------|--------|---------
 | 参数1，requestEntity为请求url中requestBody的参数承载体；参数2，typeReference为返回值的参数泛型类型   |   ResponseEntity<List<Object>>    |通过RestTemplate调用方法exchange()，获取得到ResponseEntity，将其返回|
-
-
-#### 项目的参数配置文件
-
-* bootstrap.yml
-
-* application.yml
-
-* log4j2.xml
-
-
 
 
 #### 依赖配置文件pom.xml
