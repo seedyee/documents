@@ -1,6 +1,6 @@
 ## cde-oauth2-client
 
-本篇是微服务项目cde-oauth2-client的一份详细设计文档。该项目是依赖 spring-boot 构建的一个微服务，对接github中OAuth2-service的客户端实现，通过调用 github oauth-service服务，根据用户授权登录，从而获取到用户基本信息。
+本篇是微服务项目cde-oauth2-client的一份详细设计文档。该项目是依赖 spring-boot 构建的一个微服务，对接github中OAuth2-service的客户端实现，通过调用 github oauth-service 服务，根据用户授权登录，从而获取到用户基本信息。
  
 - - - -
 
@@ -155,7 +155,7 @@ getRequestCodeUrl(): 该方法是用于生成完整的请求url，将其返回�
 
 方法: 
 
-getAccessTokenByCode(String code)
+getAccessTokenByCode(String code): 该方法是根据code参数，获取token，并且将其返回。
 
 |  参数          | 返回值类型  | 描述
 |---------------------------|--------|---------
@@ -165,7 +165,7 @@ getAccessTokenByCode(String code)
 
 方法: 
 
-getUserWithAccessToken(String token)
+getUserWithAccessToken(String token): 该方法是根据token参数，获取用户基本信息，并且将其返回
 
 |  参数          | 返回值类型  | 描述
 |---------------------------|--------|---------
@@ -202,7 +202,7 @@ buildUserRequestInfo(String token): 该方法用于构建domain包中的 UserReq
 |---------------------------|--------|---------
 | 参数1， token 参数为github回调获取得到的token值   |   UserRequestInfo    |步骤1，根据domain包下UserRequestInfo的构造方法获取到该entity的实例；步骤2，将该实例返回|
 
-buildAuthorizationCodeRequestInfo()
+buildAuthorizationCodeRequestInfo(): 该方法是用于构建domain包中的 AuthorizationCodeRequestInfo类
 
 |  参数          | 返回值类型  | 描述
 |---------------------------|--------|---------
