@@ -72,7 +72,7 @@
 
 | 方法名 		| 参数          | 返回值  | 描述
 |------------|---------------|--------|---------
-| UserRequestInfo.java() |String token, String userRequestUrl |   |构造函数|
+| UserRequestInfo() |String token, String userRequestUrl |   |构造函数|
 
 
 3、AuthorizationCodeRequestInfo.java 用于和github交互时获取code的请求传递参数entity.
@@ -134,6 +134,21 @@ callback(): 该方法对应接口 `/callback` ，用于github验证服务端的�
 #### service
 
 该包下的java类是对整个项目的业务逻辑处理的实现，在该包应新建三个java类 `AuthorizationCodeRequestService.java` `AccessTokenRequestService.java` `UserInfoRequestService.java`
+
+1、AuthorizationCodeRequestService，该类是处理请求 code（github的登录授权，请求code的url）的 service
+
+方法:
+
+getRequestCodeUrl(): 该方法是用于生成完整的请求url，将其返回。
+
+|  参数          | 返回值类型  | 描述
+|---------------------------|--------|---------
+|    |   String    |步骤1，调用builder包下RequestInfoBuilder的方法buildAuthorizationCodeRequestInfo()；步骤2，通过UriComponentsBuilder组装url；步骤3，调用UriComponentsBuilder的toUriString()方法生成url，将其返回|
+
+2、AccessTokenRequestService，该类是处理请求 token（根据获取到的code再与github交互请求token） 的service
+
+
+
 
 
 #### builder
