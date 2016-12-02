@@ -135,7 +135,7 @@ callback(): 该方法对应接口 `/callback` ，用于github验证服务端的�
 
 该包下的java类是对整个项目的业务逻辑处理的实现，在该包应新建三个java类 `AuthorizationCodeRequestService.java` `AccessTokenRequestService.java` `UserInfoRequestService.java`
 
-1、AuthorizationCodeRequestService，该类是处理请求 code（github的登录授权，请求code的url）的 service
+1、AuthorizationCodeRequestService，该类应是处理请求 code（github的登录授权，请求code的url）的 service
 
 方法:
 
@@ -143,13 +143,27 @@ getRequestCodeUrl(): 该方法是用于生成完整的请求url，将其返回�
 
 |  参数          | 返回值类型  | 描述
 |---------------------------|--------|---------
-|    |   String    |步骤1，调用builder包下RequestInfoBuilder的方法buildAuthorizationCodeRequestInfo()；步骤2，通过UriComponentsBuilder组装url；步骤3，调用UriComponentsBuilder的toUriString()方法生成url，将其返回|
+|    |   String    |步骤1，调用builder包下RequestInfoBuilder的方法buildAuthorizationCodeRequestInfo()，获取AuthorizationCodeRequestInfo实例；步骤2，通过UriComponentsBuilder组装url；步骤3，调用UriComponentsBuilder的toUriString()方法生成url，将其返回|
 
-2、AccessTokenRequestService，该类是处理请求 token（根据获取到的code再与github交互请求token） 的service
+2、AccessTokenRequestService，该类应是处理请求 token（根据获取到的code再与github交互请求token） 的service
 
+方法: 
 
+getAccessTokenByCode(String code)
 
+|  参数          | 返回值类型  | 描述
+|---------------------------|--------|---------
+|参数code，为github回调中获取得到的code  |   String    |步骤1，调用builder包下RequestInfoBuilder的方法buildAccessTokenRequestInfo()，获取AccessTokenRequestInfo实例；步骤2，根据步骤1获取到的实例和 new 关键字新建RequestEntity局部变量；步骤3，调用 agent 包下RequestAgent类的getAccessToken方法，获取得到包含token的ResponseEntity；步骤4，对ResponseEntity进行取值判断，如果token有值则返回，反之返回null|
 
+3、UserInfoRequestService，该类是请求用户基本信息（根据获取到的token，与github交互获取用户的基本信息）的service
+
+方法: 
+
+getUserWithAccessToken(String token)
+
+|  参数          | 返回值类型  | 描述
+|---------------------------|--------|---------
+|参数token，为github回调中获取得到的token  |    `List<Object>`   |步骤1，申明变量List，作为返回值；步骤2，调用builder包下RequestInfoBuilder的方法buildUserRequestInfo()，获取UserRequestInfo实例；步骤3，声明变量HttpHeaders，调用其set方法，设置"Authorization"对应的值为token；步骤4，根据步骤2和步骤获取到的实例和 new 关键字新建RequestEntity局部变量；步骤5，调用 agent 包下RequestAgent类的getUserInfo方法，获取得到包含用户信息的ResponseEntity；步骤6，对ResponseEntity进行取值判断，如果token有值则返回，反之返回null|
 
 #### builder
 
