@@ -62,8 +62,8 @@ return result:	{result: {key: value, key: value, ...}, error: {code: value, mess
 - personal: string	|	个人介绍
 - timestamp: data	|	注册时间
 - realName: string	|	用户真实姓名
-- email: string		|	邮箱
-- mobile: string	   |	电话
+- email: string		|	默认邮箱
+- mobile: string	   |	默认电话
 - isPublicEmail: boolean 	|	邮箱是否公开(true-公开，false)
 - isPublicMobile: boolean	|	电话是否公开(true-公开，false)
 
