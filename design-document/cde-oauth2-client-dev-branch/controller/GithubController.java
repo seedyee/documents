@@ -16,7 +16,7 @@ callback(final HttpServletRequest request) {
     第三步：判断第二步结果，如果为true则继续执行下一步，如果没有则返回错误信息
     第四步：执行 OAuth2Service 的 getAccessTokenByCode() 方法，获取到token
     第五步：执行 OAuth2Service 的 getUserWithToken() 方法，获取到用户名或者邮箱
-    第六步：根据 用户名或者邮箱 执行shiro 的登录操作
-    第七步：将基本用户数据返回
+    第六步：根据 用户名或者邮箱 执行 OAuthClient 中的 signin() 方法，调用cde-oauth-service中的登录接口，执行登录操作
+    第七步：将基本用户数据返回 
   }
 }

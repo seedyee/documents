@@ -27,7 +27,6 @@ getAccessTokenByCode(final String code) {
 getUserWithToken(final OAuth2AccessToken token) {
     第一步：执行 agent 包下的 getUserInfo() 方法，获取到用户基本信息。
     第二步：将用户基本信息数据存入mongodb数据库
-    第三步：jwt生成和redis缓存
     第四步：将用户账号或是邮箱返回，用于登录操作
   }
 
