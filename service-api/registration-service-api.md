@@ -100,10 +100,12 @@ return : {code: value, message: value}
 电话信息：mobiles
 
 - verified: boolean	|	是否认证（true-认证，false）
+- public : boolean  |  是否公开（true-认证，false）
 
 邮箱信息：emails
 
 - verified: boolean	|	是否认证（true-认证，false）
+- public : boolean  |  是否公开（true-认证，false）
 
 修改密码
 
