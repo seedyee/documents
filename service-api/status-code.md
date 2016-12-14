@@ -18,6 +18,11 @@
 | 1000080 |	USED_MOBILE			            | mobile has been used                         | 该电话号码已被使用
 | 1000090 |	UNDELETABLE_DEFAULT_EMAIL	      | default email cannot be deleted              | 不可删除默认邮箱
 | 1000100 |	UNDELETABLE_DEFAULT_MOBILE	      | default mobile cannot be deleted             | 不可删除默认电话号码
+| 1000110 |  ILLEGAL_ACCOUNT_NAME             | illegal account name                         | 非法的用户名
+| 1000111 |  ILLEGAL_PASSWORD                 | illegal password                             | 非法的密码字符
+| 1000112 |  ILLEGAL_EMAIL                    | illegal email                                | 非法的邮箱字符
+| 1000113 |  ILLEGAL_MOBILE                   | illegal mobile                               | 非法的移动电话号码字符
+
 
 ## 二、系统状态码
 
