@@ -46,8 +46,6 @@ error: {code: value, message: value}}
 	method: get
 parameter list:
 
-- id: string
-
 return {key: value, key: value, ...}
 基本信息：basicInfo
 
@@ -97,17 +95,14 @@ return : {code: value, message: value}
 
 基本信息：basicsInfo
 
-- id: string
 - 其它字段信息请看查询用户的API
 
 电话信息：mobiles
 
-- id: string
 - verified: boolean	|	是否认证（true-认证，false）
 
 邮箱信息：emails
 
-- id: string
 - verified: boolean	|	是否认证（true-认证，false）
 
 修改密码
@@ -149,11 +144,7 @@ return : {code: value, message: value}
 
 电话信息：mobiles
 
-- id: string
-
 邮箱信息：emails
-
-- id: string
 
 - - - -
 - - - -
