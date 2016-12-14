@@ -109,7 +109,8 @@ return : {code: value, message: value}
 修改密码
 
 - password: string
-- newPassword: string
+- password1: string
+- password2: string
 
 修改用户名
 
