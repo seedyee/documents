@@ -63,20 +63,24 @@ return {key: value, key: value, ...}
 - realName: string	|	用户真实姓名
 - email: string		|	默认邮箱
 - mobile: string	   |	默认电话
-- isPublicEmail: boolean 	|	邮箱是否公开(true-公开，false)
-- isPublicMobile: boolean	|	电话是否公开(true-公开，false)
+- whetherPublicEmail: boolean 	|	邮箱是否公开(true-公开，false)
+- whetherPublicMobile: boolean	|	电话是否公开(true-公开，false)
 
 电话信息：mobiles（电话认证--保留）
 
 - id: string
 - mobile: string	|	电话
-- isVerified: boolean 		|		是否认证（true-认证，false)
+- whetherPublic: boolean | 是否公开 (true-公开，false)
+- whetherDefault: boolean | 是否默认 (true-默认，false)
+- whetherVerified: boolean 		|		是否认证（true-认证，false)
 
 邮箱信息：emails
 
 - id: string
 - email: string	|	邮箱名
-- isVerified: boolean	|	是否认证（true-认证，false）
+- whetherPublic: boolean | 是否公开 (true-公开，false)
+- whetherDefault: boolean | 是否默认 (true-默认，false)
+- whetherVerified: boolean	|	是否认证（true-认证，false）
 
 - - - -
 
@@ -99,12 +103,12 @@ return : {code: value, message: value}
 电话信息：mobiles
 
 - id: string
-- isVerified: boolean 		|		是否认证（true-认证，false)
+- whetherVerified: boolean	|	是否认证（true-认证，false）
 
 邮箱信息：emails
 
 - id: string
-- isVerified: boolean 		|		是否认证（true-认证，false)
+- whetherVerified: boolean	|	是否认证（true-认证，false）
 
 修改密码
 
