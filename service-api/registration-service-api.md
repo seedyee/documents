@@ -37,7 +37,7 @@ parameter list:
 - verifyCode: string		|	校验码（保留）
 
 
-return : {result: {key: value, key: value, ...}, error: {code: value, message: value}}
+error: {code: value, message: value}}
 
 - - - -
 
@@ -48,8 +48,7 @@ parameter list:
 
 - id: string
 
-return result:	{result: {key: value, key: value, ...}, error: {code: value, message: value}}
-
+return {key: value, key: value, ...}
 基本信息：basicInfo
 
 - id: string
@@ -90,7 +89,7 @@ parameter list:
 - email: {key: value, key: value, ...}
 - password: {key: value, key: value, ...}
 
-return : {error: {code: value, message: value}}
+return : {code: value, message: value}
 
 基本信息：basicsInfo
 
@@ -125,7 +124,7 @@ parameter list:
 
 - {key: value, key: value, ...}
 
-return : {error: {code: value, message: value}}
+return : {code: value, message: value}
 
 电话信息：mobile
 
@@ -141,7 +140,7 @@ return : {error: {code: value, message: value}}
 	url: /accounts/{id}/mobiles/{id} || {id}/emails/{id}  
 	method: DELETE
 
-return : {error: {code: value, message: value}}
+return : {code: value, message: value}
 
 电话信息：mobiles
 
