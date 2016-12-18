@@ -22,6 +22,7 @@
 | 1000111 |  ILLEGAL_PASSWORD                 | illegal password                             | 非法的密码字符
 | 1000112 |  ILLEGAL_EMAIL                    | illegal email                                | 非法的邮箱字符
 | 1000113 |  ILLEGAL_MOBILE                   | illegal mobile                               | 非法的移动电话号码字符
+| 1000114 |  MISS_REQUIRED_PARAMETER          | miss required parameter                      | 缺少必要参数	
 
 
 ## 二、系统状态码
