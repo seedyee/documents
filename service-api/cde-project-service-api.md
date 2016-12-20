@@ -12,7 +12,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、我创建的项目
+######2、我创建的项目
 
 	url: /accounts/projects/created
 	method: get
@@ -21,7 +21,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、我参与的项目
+######3、我参与的项目
 
 	url: /accounts/projects/joined
 	method: get
@@ -30,7 +30,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、我关注的项目
+######4、我关注的项目
 
 	url: /accounts/projects/watched
 	method: get
@@ -39,16 +39,16 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、我收藏的项目
+######5、我收藏的项目
 
-	url: /accounts/projects/stared
+	url: /accounts/projects/collect
 	method: get
 
 return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、添加项目
+######6、添加项目
 
 	url: /accounts/projects/create
 	method: post
@@ -57,7 +57,7 @@ return : {code: value, message: value}
 
 - - - -
 
-######1、更新项目
+######7、更新项目
 
 	url: /accounts/projects/{id}/update
 	method: post
@@ -66,7 +66,7 @@ return : {code: value, message: value}
 
 - - - -
 
-######1、删除项目
+######8、删除项目
 
 	url: /accounts/projects/{id}/del
 	method: delete
@@ -75,7 +75,7 @@ return : {code: value, message: value}
 
 - - - -
 
-######1、搜索成员
+######9、搜索成员
 
 	url: /accounts/projects/members
 	method: get
@@ -84,7 +84,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、查询项目成员
+######10、查询项目成员
 
 	url: /projects/{id}/members
 	method: get
@@ -93,7 +93,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 - - - -
 
-######1、添加项目成员
+######11、添加项目成员
 
 	url: /projects/{id}/members
 	method: post
@@ -102,7 +102,7 @@ return : {code: value, message: value}
 
 - - - -
 
-######1、删除项目成员
+######12、删除项目成员
 
 	url: /projects/{id}/members
 	method: delete
@@ -110,6 +110,25 @@ return : {code: value, message: value}
 return : {code: value, message: value}
 
 - - - -
+
+######4、添加关注项目
+
+	url: /projects/{id}/watched
+	method: get
+
+return : {code: value, message: value}
+
+- - - -
+
+######5、添加收藏项目
+
+	url: /projects/{id}/collect
+	method: get
+
+return : {code: value, message: value}
+
+- - - -
+
 
 
 项目实体对象 project:
