@@ -66,7 +66,7 @@ return {key: value, key: value, ...}
 
 电话信息：mobiles（电话认证--保留）
 
-- MobileId: string
+- mobileId: string
 - mobile: string	|	电话
 - public: boolean | 是否公开 (true-公开，false)
 - default: boolean | 是否默认 (true-默认，false)
