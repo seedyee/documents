@@ -195,30 +195,38 @@ return : {code: value, message: value}
 
 ######14、添加关注项目
 
-	url: /projects/{id}/watched
-	method: get
-
-parameter list:
-
-- String  | id: 关注项目的id
+	url: accounts/projects/{id}/watched
+	method: post
 
 return : {code: value, message: value}
 
 - - - -
 
-######15、添加收藏项目
+######15、删除关注项目
+	url: accounts/projects/{id}/watched
+	method: delete
+	
+return : {code: value, message: value}
 
-	url: /projects/{id}/collect
-	method: get
+- - - -	
 
-parameter list:
+######16、添加收藏项目
 
-- String  | id: 收藏项目的id
+	url: accounts/projects/{id}/collect
+	method: post
 
 return : {code: value, message: value}
 
 - - - -
 
+######17、添加收藏项目
+
+	url: accounts/projects/{id}/collect
+	method: delete
+
+return : {code: value, message: value}
+
+- - - -
 
 
 项目实体对象 project:
@@ -233,7 +241,7 @@ return : {code: value, message: value}
 
 项目成员实体对象 member:
 
-* id: String 	| 	用户id
+* accountId: String 	| 	用户id
 * principal: string 	|	成员名(可不存储于数据库)
 
 - - - -
