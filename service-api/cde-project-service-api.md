@@ -219,7 +219,7 @@ return : {code: value, message: value}
 
 - - - -
 
-######17、添加收藏项目
+######17、删除收藏项目
 
 	url: accounts/projects/{id}/collect
 	method: delete
