@@ -15,6 +15,13 @@ public class AccountDao {
 	Member findMemberById(String accountId);
 
 	/**
+	 * 获取项目成员的信息集合
+	 * @param  accountIds 项目成员的id集合
+	 * @return 返回项目成员信息
+	 */
+	List<Member> findProjectMembers(List<String> accountIds);
+
+	/**
 	 * 为用户添加关注的项目的id
 	 * 
 	 * @param  accountId 用户id

@@ -30,5 +30,12 @@ public interface ProjectDao {
 	 * @return 删除成功返回1，否则返回-1
 	 */
 	int deleteProjectMember(String objcetId, String accountId);
+
+	/**
+	 * 获取用户关注的或是收藏的项目的信息集合
+	 * @param  projectIds 项目id集合
+	 * @return 返回用户关注的或是收藏的项目的信息集合
+	 */
+	List<Project> findAccountProjects(List<String> projectIds)
 	
 }
