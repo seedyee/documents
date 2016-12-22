@@ -60,7 +60,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @param  projectId 项目id
 	 * @return 返回项目的基本信息
 	 */
-	public Project getProjectInfo(final String projectId) {
+	public Project getProjectInfo(final String accountId, final String projectId) {
 		第一步： 执行 ProjectRepository 中的 findById() 方法，获取项目基本信息
 		第二步： 返回项目基本信息，若项目部存在返回null
 	}
@@ -69,16 +69,17 @@ public class ProjectServiceImpl implements ProjectService {
 	 * 创建项目
 	 * @param project 需要创建的项目信息
 	 */
-	public void createProject(final Project project) {
-		第一步： 执行 ProjectRepository 中的 save() 方法
-		第二步： 判断第一步返回的结果，若为空，则抛出创建失败异常
+	public void createProject(final String accountId, final Project project) {
+		第一步： 判断用户创建过该项目没有
+		第二步： 执行 ProjectRepository 中的 save() 方法
+		第三步： 判断第一步返回的结果，若为空，则抛出创建失败异常
 	}
 
 	/**
 	 * 修改项目的基本信息
 	 * @param project 需要修改项目的信息
 	 */
-	public void updateProjectInfo(final Project project) {
+	public void updateProjectInfo(final String accountId, final Project project) {
 		第一步： 执行 ProjectDao 中的 updateProject() 方法
 		第二步： 判断第一步返回的结果，若为-1，则抛出更新失败异常
 	}

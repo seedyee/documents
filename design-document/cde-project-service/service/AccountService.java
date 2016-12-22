@@ -10,35 +10,35 @@ public interface AccountService {
 	 * @param  principal 用户名或邮箱名
 	 * @return 返回Member信息
 	 */
-	Member getMemberByPrincipal(String principal);
+	Member getMemberByPrincipal(final String principal);
 
 	/**
 	 * 为用户添加关注的项目
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	void addWatchedProject(String accountId, String projectId);
+	void addWatchedProject(final String accountId, final String projectId);
 
 	/**
 	 * 删除用户关注的项目
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	void deleteWatchedProject(String accountId, String projectId);
+	void deleteWatchedProject(final String accountId, final String projectId);
 
 	/**
 	 * 为用户添加收藏项目
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	void addCollectionProject(String accountId, String projectId);
+	void addCollectionProject(final String accountId, final String projectId);
 
 	/**
 	 * 删除用户收藏的项目
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	void deleteCollectionProject(String accountId, String projectId);
+	void deleteCollectionProject(final String accountId, final String projectId);
 
 
 }

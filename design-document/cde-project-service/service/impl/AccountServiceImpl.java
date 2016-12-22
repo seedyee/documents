@@ -10,7 +10,7 @@ public class AccountServiceImpl implements AccountService {
 	 * @param  principal 用户名或邮箱名
 	 * @return 返回Member信息
 	 */
-	public Member getMemberByPrincipal(String principal) {
+	public Member getMemberByPrincipal(final String principal) {
 		第一步： 调用 AccountDao 中的 findMember() 方法，获取Member信息
 		第二步： 返回第一步中获取的Member信息
 	}
@@ -20,7 +20,7 @@ public class AccountServiceImpl implements AccountService {
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	public void addWatchedProject(String accountId, String projectId) {
+	public void addWatchedProject(final String accountId, final String projectId) {
 		第一步： 调用 AccountDao 中的 addWatchedProject() 方法
 		第二步： 判断第一步返回的结果，若为-1，则抛出添加失败异常
 	}
@@ -40,7 +40,7 @@ public class AccountServiceImpl implements AccountService {
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	public void addCollectionProject(String accountId, String projectId) {
+	public void addCollectionProject(final String accountId, final String projectId) {
 		第一步： 调用 AccountDao 中的 addCollectionProject() 方法
 		第二步： 判断第一步返回的结果，若为-1，则抛出添加失败异常
 	}
@@ -50,7 +50,7 @@ public class AccountServiceImpl implements AccountService {
 	 * @param accountId 用户id
 	 * @param projectId 项目id
 	 */
-	public void deleteCollectionProject(String accountId, String projectId) {
+	public void deleteCollectionProject(final String accountId, final String projectId) {
 		第一步： 调用 AccountDao 中的 deleteCollectionProject() 方法
 		第二步： 判断第一步返回的结果，若为-1，则抛出删除失败异常
 	}
