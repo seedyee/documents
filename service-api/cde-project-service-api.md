@@ -162,7 +162,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 return parameter list:
 
-- id: string |  用户id
+- accountId: string |  用户id
 - principal: string    | 项目成员(用户名)
 
 - - - -
@@ -174,7 +174,7 @@ return parameter list:
 
 parameter list:
 
-- String  | id: 用户id
+- String  | accountId: 用户id
 
 return : {code: value, message: value}
 
