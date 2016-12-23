@@ -36,6 +36,6 @@ public interface ProjectDao {
 	 * @param  projectIds 项目id集合
 	 * @return 返回用户关注的或是收藏的项目的信息集合
 	 */
-	List<Project> findAccountProjects(List<String> projectIds)
+	List<Project> findAccountProjects(final List<String> projectIds);
 	
 }
