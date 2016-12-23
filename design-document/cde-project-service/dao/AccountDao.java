@@ -1,4 +1,4 @@
-public class AccountDao {
+public interface AccountDao {
 
 	/**
 	 * 根据用户名或用户默认邮箱搜索成员
