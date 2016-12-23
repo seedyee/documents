@@ -6,30 +6,30 @@ public interface ProjectDao {
 	 * @param  project 要更新的项目的信息，包含项目id
 	 * @return 更新成功返回1，否则返回-1
 	 */
-	int updateProject(Project project);
+	int updateProject(final Project project);
 
 	/**
 	 * 获取项目成员的id集合
-	 * @param  objectId 项目id
+	 * @param  projectId 项目id
 	 * @return 返回项目成员的id集合
 	 */
-	List<String> findProjectMembersId(String objectId);
+	List<String> findProjectMembersId(final String projectId);
 
 	/**
 	 * 添加项目成员id
 	 * @param  objcetId  项目id
-	 * @param  accountId 用户id
+	 * @param  projectId 用户id
 	 * @return 添加成功返回1，否则返回-1
 	 */
-	int addProjectMember(String objcetId, String accountId);
+	int addProjectMember(final String objcetId, final String projectId);
 
 	/**
 	 * 删除项目成员id
 	 * @param  objcetId  项目id
-	 * @param  accountId 用户id
+	 * @param  projectId 用户id
 	 * @return 删除成功返回1，否则返回-1
 	 */
-	int deleteProjectMember(String objcetId, String accountId);
+	int deleteProjectMember(final String objcetId, final String projectId);
 
 	/**
 	 * 获取用户关注的或是收藏的项目的信息集合
