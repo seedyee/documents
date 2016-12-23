@@ -142,9 +142,9 @@ public class ProjectController {
 	}
 
 	/**
-	 * 添加项目成员
+	 * 删除项目成员
 	 * @param projectId 项目id
-	 * @param accountId 要添加的成员id
+	 * @param accountId 要删除的成员id
 	 * @return 返回操作结果
 	 */
 	@RequestMapping(value = "/projects/{id}/members", method = RequestMethod.DELETE)
