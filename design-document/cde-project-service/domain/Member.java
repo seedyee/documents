@@ -13,7 +13,17 @@ public class Member{
 	/**
 	 * 项目成员名(用户名)
 	 */
-	private String principal;
+	private String name;
+
+	/**
+	 * 用户关注的项目的id集合
+	 */
+	private List<String> watchedProjects;
+
+	/**
+	 * 用户收藏的的项目的id集合
+	 */
+	private List<String> collectProjects;
 
 	//省略get和set方法
 }
