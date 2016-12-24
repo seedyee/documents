@@ -18,7 +18,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @param  accountId 用户id
 	 * @return 返回用户创建的项目的信息
 	 */
-	public List<Project> getCreatedProject(final String accountId) {
+	public List<Project> getCreatedProjects(final String accountId) {
 		第一步： 执行 ProjectRepository 中的 findByAccountId() 方法，获取到用户创建的项目信息List
 		第二步： 返回用户创建的项目的信息
 	}
@@ -28,7 +28,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @param  accountId 用户id
 	 * @return 返回用户参与的项目的信息
 	 */
-	public List<Project> getJoinedProject(final String accountId) {
+	public List<Project> getJoinedProjects(final String accountId) {
 		第一步： 执行 ProjectRepository 中的 findByMembers() 方法，获取到用户参数的项目信息
 		第二步： 返回用户参与的项目的信息 
 	}
@@ -38,7 +38,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @param  accountId 用户id
 	 * @return 返回用户关注的项目的信息
 	 */
-	public List<Project> getWatchedProject(final String accountId) {
+	public List<Project> getWatchedProjects(final String accountId) {
 		第一步： 执行 AccountDao 中的 findWatchedProject() 方法，获取到用户关注的项目id集合
 		第二步： 根据第一步中获取到的用户关注的项目id集合执行 ProjectDao 中的 findAccountProjects() 方法，获取项目信息集合
 		第三步： 返回用户关注的项目信息集合
@@ -49,7 +49,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @param  accountId 用户id
 	 * @return 返回用户收藏的项目的信息
 	 */
-	public List<Project> getCollectionProject(final String accountId) {
+	public List<Project> getCollectionProjects(final String accountId) {
 		第一步： 执行 AccountDao 中的 findCollectionProject() 方法，获取到用户收藏的项目id集合
 		第二步： 根据第一步中获取到的用户收藏的项目id集合执行 ProjectDao 中的 findAccountProjects() 方法，获取项目信息集合
 		第三步： 返回用户收藏的项目信息集合
@@ -99,7 +99,7 @@ public class ProjectServiceImpl implements ProjectService {
 	 * @return 返回项目成员的信息
 	 */
 	public List<Member> getProjectMembers(final String objectId) {
-		第一步： 执行 ProjectDao 中的 findProjectMembersId() 方法，获取项目成员id集合
+		第一步： 执行 ProjectDao 中的 findProjectMembersIds() 方法，获取项目成员id集合
 		第二步： 根据第一步中获取到的项目成员的id集合执行 AccountDao 中的 findProjectMembers() 方法，获取项目成员信息
 		第三步： 返回第二步中获取到的项目成员信息
 	}

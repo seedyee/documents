@@ -13,7 +13,7 @@ public interface ProjectDao {
 	 * @param  projectId 项目id
 	 * @return 返回项目成员的id集合
 	 */
-	List<String> findProjectMembersId(final String projectId);
+	List<String> findProjectMembersIds(final String projectId);
 
 	/**
 	 * 添加项目成员id

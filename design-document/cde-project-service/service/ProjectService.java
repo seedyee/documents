@@ -16,28 +16,28 @@ public interface ProjectService {
 	 * @param  accountId 用户id
 	 * @return 返回用户创建的项目的信息
 	 */
-	List<Project> getCreatedProject(final String accountId);
+	List<Project> getCreatedProjects(final String accountId);
 
 	/**
 	 * 获取用户参与的项目的信息
 	 * @param  accountId 用户id
 	 * @return 返回用户参与的项目的信息
 	 */
-	List<Project> getJoinedProject(final String accountId);
+	List<Project> getJoinedProjects(final String accountId);
 
 	/**
 	 * 获取用户关注的项目的信息
 	 * @param  accountId 用户id
 	 * @return 返回用户关注的项目的信息
 	 */
-	List<Project> getWatchedProject(final String accountId);
+	List<Project> getWatchedProjects(final String accountId);
 	
 	/**
 	 * 获取用户收藏的项目的信息
 	 * @param  accountId 用户id
 	 * @return 返回用户收藏的项目的信息
 	 */
-	List<Project> getCollectionProject(final String accountId);
+	List<Project> getCollectionProjects(final String accountId);
 
 	/**
 	 * 获取项目的基本信息

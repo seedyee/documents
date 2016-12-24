@@ -23,9 +23,9 @@ public class ProjectController {
 	 * @return 返回用户创建项目信息
 	 */
 	@RequestMapping(value = "/accounts/projects/created", method = RequestMethod.GET)
-	public List<Project> getCreatedProject(final HttpServletRequest request) {
+	public List<Project> getCreatedProjects(final HttpServletRequest request) {
 		第一步： 从request中获取用户id
-		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getCreatedProject 方法，获取到用户创建的项目信息
+		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getCreatedProjects 方法，获取到用户创建的项目信息
 		第三步： 返回第二步中获取的用户创建的项目信息
 	}
 
@@ -35,9 +35,9 @@ public class ProjectController {
 	 * @return 返回用户参与项目信息
 	 */
 	@RequestMapping(value = "/accounts/projects/joined", method = RequestMethod.GET)
-	public List<Project> getJoinedProject(final HttpServletRequest request) {
+	public List<Project> getJoinedProjects(final HttpServletRequest request) {
 		第一步： 从request中获取用户id
-		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getJoinedProject 方法，获取到用户参与的项目信息
+		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getJoinedProjects 方法，获取到用户参与的项目信息
 		第三步： 返回第二步中获取的用户参与创建的项目信息
 	}
 
@@ -47,9 +47,9 @@ public class ProjectController {
 	 * @return 返回用户关注的项目信息
 	 */
 	@RequestMapping(value = "/accounts/projects/watched", method = RequestMethod.GET)
-	public List<Project> getWatchedProject(final HttpServletRequest request) {
+	public List<Project> getWatchedProjects(final HttpServletRequest request) {
 		第一步： 从request中获取用户id
-		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getWatchedProject 方法，获取到用户关注的项目信息
+		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getWatchedProjects 方法，获取到用户关注的项目信息
 		第三步： 返回第二步中获取的用户关注创建的项目信息
 	}
 
@@ -59,9 +59,9 @@ public class ProjectController {
 	 * @return 返回用户关注的项目信息
 	 */
 	@RequestMapping(value = "/accounts/projects/collect", method = RequestMethod.GET)
-	public List<Project> getCollectionProject(final HttpServletRequest request) {
+	public List<Project> getCollectionProjects(final HttpServletRequest request) {
 		第一步： 从request中获取用户id
-		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getCollectionProject 方法，获取到用户收藏的项目信息
+		第二步： 第一步中获取到的用户id作为参数，执行 ProjectServiceImpl 中的 getCollectionProjects 方法，获取到用户收藏的项目信息
 		第三步： 返回第二步中获取的用户收藏创建的项目信息
 	}
 
