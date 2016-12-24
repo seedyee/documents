@@ -149,7 +149,7 @@ return [{key: value, ...}, {key: value, ...}, ...]
 return parameter list:
 
 - id: string |  用户id
-- principal: string    | 项目成员(用户名)
+- name: string    | 项目成员(用户名)
 
 - - - -
 
@@ -162,8 +162,8 @@ return [{key: value, ...}, {key: value, ...}, ...]
 
 return parameter list:
 
-- accountId: string |  用户id
-- principal: string    | 项目成员(用户名)
+- id: string |  用户id
+- name: string    | 项目成员(用户名)
 
 - - - -
 
@@ -241,7 +241,9 @@ return : {code: value, message: value}
 
 项目成员实体对象 member:
 
-* accountId: String 	| 	用户id
-* principal: string 	|	成员名(可不存储于数据库)
+* id: String 	| 	用户id
+* name: string 	|	成员名(用户名)
+* watchedProjects: List<String> | 用户关注的项目id集合
+* collectProjects: List<String> | 用户收藏的项目id集合
 
 - - - -
