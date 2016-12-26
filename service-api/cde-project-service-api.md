@@ -174,7 +174,7 @@ return parameter list:
 
 parameter list:
 
-- String  | accountId: 用户id
+- String  | id: 用户id
 
 return : {code: value, message: value}
 
